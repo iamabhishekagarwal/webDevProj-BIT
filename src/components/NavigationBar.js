@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from "react-router-bootstrap";
 import github from "../icons/github.svg";
+import githubColor from "../icons/githubColor.svg";
 import insta from "../icons/insta.svg";
-import logo from "../images/logo_edited.jpg";
+import logo from "../images/LOGO.jpeg";
+import instacolor from "../images/instagram.png";
 function NavigationBar() {
+
+const [icon1,seticon1]=useState(insta)
+const [icon2,seticon2]=useState(github)
+
+const handleInstaIconEnter=()=>{
+    seticon1(instacolor)
+}
+const handleInstaIconLeave=()=>{
+    seticon1(insta)
+}
+const handleGitIconEnter=()=>{
+    seticon2(githubColor)
+}
+const handleGitIconLeave=()=>{
+    seticon2(github)
+}
+
 return (
 <div>
 <Navbar expand="lg" style={{background:"black"}} variant='dark' className=''>
@@ -32,10 +51,15 @@ return (
         <Nav.Link>Compiler</Nav.Link>
         </LinkContainer>
         <NavDropdown  title="Blog"  id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Hackathon</NavDropdown.Item>
+            <LinkContainer to="/HackathonUser">
+            <NavDropdown.Item >Hackathon</NavDropdown.Item>
+            </LinkContainer>
+            
+            <LinkContainer to="/TechNewsUser">
             <NavDropdown.Item href="#action/3.2">
             Tech News
             </NavDropdown.Item>
+            </LinkContainer>
             <NavDropdown.Item href="#action/3.3">Latest Tech news</NavDropdown.Item>
             {/* <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
@@ -46,8 +70,16 @@ return (
     </Navbar.Collapse>
     <Navbar.Collapse id="icons" style={{justifyContent:"end"}}>
         <Nav style={{gap:"1rem",alignItems:"center"}}>
-            <img src={insta} alt='Instagram'/>
-            <img src={github} alt='Github'/>
+
+            <a href="" target='blank'>
+                <img onMouseLeave={handleInstaIconLeave} onMouseEnter={handleInstaIconEnter} src={icon1} alt='Instagram'/>
+            </a>
+
+            <a target='blank' href="https://github.com/iamabhishekagarwal/webDevProj-BIT.git">
+                <img  onMouseLeave={handleGitIconLeave} onMouseEnter={handleGitIconEnter} src={icon2} alt='Github'/>
+            </a>
+            
+            
         </Nav>
     </Navbar.Collapse>
     </Container>

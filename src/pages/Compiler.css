@@ -1,0 +1,8 @@
+.white-placeholder::placeholder{
+    color: grey;
+}
+
+.output:focus{
+    box-shadow: none;
+    border-color: green;
+}

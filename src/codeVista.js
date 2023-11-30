@@ -8,7 +8,7 @@ const express=require('express');
 
 const jwt=require('jsonwebtoken');
 
-const mongoose=require('mongoose'); 
+const mongoose=require('mongoose');
 
 const app=express();
 
@@ -204,11 +204,12 @@ function cppVerify(lang,usr,fn){
 
 //admin routes
 
-app.post("/admins/signup",(req,res)=>{//allows the admin to signup
+app.post("/admins/signup",authenticate,(req,res)=>{//allows the admin to signup
     const username=req.body.username;
     const password=req.body.password;
+    console.log(username)
     Admin
-    .findOne({ Username: username })
+    .findOne({ username })
     .then((admin)=>{
         if(admin!==null){
             console.log(admin);
@@ -224,7 +225,7 @@ app.post("/admins/signup",(req,res)=>{//allows the admin to signup
     });    
 });
 
-app.post("/admins/login",(req,res)=>{//allows the admin to login
+app.post("/admins/login",authenticate,(req,res)=>{//allows the admin to login
     const username=req.body.username;
     const password=req.body.password;
     Admin.findOne({username}).then((admin)=>{
@@ -240,14 +241,7 @@ app.post("/admins/login",(req,res)=>{//allows the admin to login
 
 app.post("/admins/postHackthon",authenticate,(req,res)=>{//post a new hackthon tab
     const details=req.body;
-    console.log(details);
-    const EndDate = new Date('05 October 2011 14:48 UTC');
-    const obj={
-        "Title" : details.Title,
-        "Description" : details.Description,
-        "RegistrationLink" : details.RegistrationLink
-    }
-    const newHackthon=new Hackthon(obj);
+    const newHackthon=new Hackthon(details);
     newHackthon.save();
     res.status(200).send(JSON.stringify(newHackthon));
 });

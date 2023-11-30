@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import NavigationBar from "./components/NavigationBar";
 import Compiler from "./pages/Compiler";
+import HackathonUser from "./pages/HackathonUser";
 import Home from "./pages/Home";
+import TechNews from "./pages/TechNews";
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -20,10 +22,25 @@ function App() {
           <NavigationBar />
           <Routes>
             <Route
+              exact
               path="/"
               element={<Home setProgress={setProgress} />}
             ></Route>
-            <Route path="/Compiler" element={<Compiler setProgress={setProgress} />}></Route>
+            <Route
+              exact
+              path="/Compiler"
+              element={<Compiler setProgress={setProgress} />}
+            ></Route>
+            <Route
+              exact
+              path="/HackathonUser"
+              element={<HackathonUser setProgress={setProgress} />}
+            ></Route>
+            <Route
+              exact
+              path="/TechNewsUser"
+              element={<TechNews setProgress={setProgress} />}
+            ></Route>
           </Routes>
         </div>
       </BrowserRouter>
