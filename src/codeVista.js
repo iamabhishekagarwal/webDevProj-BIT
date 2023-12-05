@@ -319,7 +319,7 @@ app.post("/users/attend",(req,res)=>{//allows user to compile their code
     const language=package.language
     switch (language){
         case 1:
-            res.send(pythonVerify(language,package.username,package.program));            
+            res.send(pythonVerify(language,package.username,package.program));
             break;
         case 2:
             res.send(javaVerify(language,package.username,package.program));

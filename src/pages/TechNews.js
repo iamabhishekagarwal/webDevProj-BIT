@@ -8,7 +8,7 @@ function TechNews(props) {
         },500)
     },[])
 
-    document.body.style.background = "#242124";
+    // document.body.style.background = "#242124";
 return (
 <>
 <h2 style={{ color: "white" }} className="text-center my-2">

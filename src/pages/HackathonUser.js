@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Cards from "../components/Cards";
 function HackathonUser(props) {
-document.body.style.background = "#242124";
+// document.body.style.background = "#242124";
 
 useEffect(() => {
 props.setProgress(50);

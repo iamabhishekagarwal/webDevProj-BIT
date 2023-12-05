@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import image1 from "../images/page1.jpg";
 import image2 from "../images/page2.jpg";
 import image3 from "../images/page3.jpg";
-function CarouselComponent() {
+export default function CarouselComponent() {
 return (
 <div>
 <Carousel>
@@ -35,4 +35,6 @@ return (
 )
 }
 
-export default CarouselComponent
+
+
+

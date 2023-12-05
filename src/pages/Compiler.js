@@ -29,7 +29,7 @@ const handleToReset = () => {
 setText("");
 };
 
-document.body.style.background = "#242124";
+// document.body.style.background = "#242124";
 
 const handleOnChange = (Event) => {
 setText(Event.target.value);
