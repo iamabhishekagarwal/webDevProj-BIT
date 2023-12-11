@@ -129,6 +129,7 @@ return (
         }}
         ></textarea>
 
+        <div className="d-flex flex-row">
         <button
         id="button1"
         className="btn btn-primary  my-2 mx-2"
@@ -136,7 +137,7 @@ return (
         onMouseOver={handle1}
         style={{ backgroundColor: "#228B22", borderColor: "green",}}
         >
-        <img style={{ paddingBottom: "2px" }} src={play} alt="play icon" />
+        <img  src={play} alt="play icon" />
         Run
         </button>
 
@@ -168,12 +169,13 @@ return (
         onMouseOver={handle3}
         >
         <img
-            style={{ paddingRight: "2px", paddingBottom: "2px" }}
+            // style={{ paddingRight: "2px", paddingBottom: "2px" }}
             src={AI}
             alt="AI icon"
         />
         Ask AI
         </button>
+        </div>
     </div>
     <div className="col">
         <DropdownButton
@@ -183,7 +185,7 @@ return (
         id="dropdown-item-button"
         title="Select Language"
         menuVariant="dark"
-        style={{width:"10vw"}}
+        style={{width:"180 px",}}
         >
         <Dropdown.Item as="button">
             C
@@ -200,7 +202,7 @@ return (
             <img
             className="align-bottom"
             src={Cplusplus}
-            style={{ width: "25px", marginLeft: "63px" }}
+            style={{ width: "25px", marginLeft: "66px" }}
             alt="C++ icon"
             />
         </Dropdown.Item>
@@ -210,7 +212,7 @@ return (
             <img
             className="align-bottom"
             src={java}
-            style={{ width: "25px", marginLeft: "65px" }}
+            style={{ width: "25px", marginLeft: "62px" }}
             alt="java icon"
             />
         </Dropdown.Item>
@@ -220,7 +222,7 @@ return (
             <img
             className="align-bottom"
             src={javascript}
-            style={{ width: "25px", marginLeft: "27px" }}
+            style={{ width: "25px", marginLeft: "24px" }}
             alt="javascript icon"
             />
         </Dropdown.Item>

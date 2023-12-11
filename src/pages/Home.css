@@ -18,6 +18,7 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
+  max-width: 97vw;
   margin: 0;
   padding: 0;
 }
@@ -27,13 +28,13 @@ body {
   height: 200px;
   margin-top: 10px;
 }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
 .swiper-slide img {
   display: block;
+  border-radius: 5px;
   width: 100%;
 }
+.swiper-slide{
+  border-radius: 20px;
+
+}
+

@@ -7,5 +7,7 @@
     border-color: green;
 }
 body{
+    overflow-x: hidden;
     background:linear-gradient(to right,#242124,black)
+    
 }

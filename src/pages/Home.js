@@ -6,6 +6,11 @@ import { EffectCube, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CarouselComponent from "../components/CarouselComponent";
 import Footer from "../components/Footer.js";
+import CLogo from "../icons/C.svg";
+import CplusplusLogo from "../images/C++Logo.png";
+import GroupImage from "../images/GroupImage.jpeg";
+import javaLogo from "../images/javaLogo.png";
+import pythonLogo from "../images/pythonLogo.png";
 import './Home.css';
 function Home(props) {
 useEffect(() => {
@@ -16,16 +21,18 @@ setTimeout(() => {
 }, []);
 return (
 <>
-    <section id="section1">
+    <section id="section1" >
+    <div style={{width:"100vw",height:"90vh"}}>
     <CarouselComponent />
+    </div>
     </section>
 
     <section className="my-3" id="section2">
-    <h1 className="text-center" style={{color:"whitesmoke"}}>Some Content</h1>
+    <h1 className="text-center" >Some Content</h1>
     </section>
 
     <section className="my-3" id="section3">
-    <h2 className="text-center" style={{color:"whitesmoke"}}>Available for</h2>
+    <h2 className="text-center" >Available for</h2>
     <div className="my-3 text-center">
     <Swiper
         effect={'cube'}
@@ -46,19 +53,19 @@ return (
         className="mySwiper"
     >
         <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img style={{backgroundColor:"black"}} src={javaLogo} />
         </SwiperSlide>
         
         <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        <img style={{backgroundColor:"#1B1212"}} src={pythonLogo} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <img style={{backgroundColor:"#5C6BC0"}} src={CLogo}/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <img style={{backgroundColor:"#037FCC"}} src={CplusplusLogo} />
         </SwiperSlide>
     </Swiper>
     </div>
@@ -79,9 +86,28 @@ return (
     </section>
 
     <section id="section5">
-    <div className="container">
+    <div>
+        <div>
         <h2 className="text-center">Our Team</h2>
-        <p>image and about our team</p>
+        </div>
+        <div className="text-center">
+        <img className="" style={{width:"auto",height:"25vh",}} src={GroupImage} alt="Image" />
+        </div>
+        <div className="row my-3 text-center" style={{color:"white"}}>
+            <div className="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo quam repudiandae sunt impedit esse obcaecati doloremque, nisi assumenda consequatur similique quas. Doloremque commodi error quasi hic dolorem nulla fuga cupiditate maxime esse tempore?</p>
+            </div>
+            
+            <div className="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid itaque doloribus enim, nulla id ipsa quibusdam autem non, similique impedit consequuntur blanditiis dolorem sequi magnam? Exercitationem eaque numquam consectetur aperiam sunt ipsum perferendis!</p>
+            </div>
+            <div className="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid itaque doloribus enim, nulla id ipsa quibusdam autem non, similique impedit consequuntur blanditiis dolorem sequi magnam? Exercitationem eaque numquam consectetur aperiam sunt ipsum perferendis!</p>
+            </div>
+            <div className="col-6 ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid itaque doloribus enim, nulla id ipsa quibusdam autem non, similique impedit consequuntur blanditiis dolorem sequi magnam? Exercitationem eaque numquam consectetur aperiam sunt ipsum perferendis!</p>
+            </div>
+        </div>
     </div>
     </section>
 
