@@ -1,4 +1,5 @@
 import { default as React, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
@@ -11,8 +12,12 @@ import CplusplusLogo from "../images/C++Logo.png";
 import GroupImage from "../images/GroupImage.jpeg";
 import javaLogo from "../images/javaLogo.png";
 import pythonLogo from "../images/pythonLogo.png";
+
 import './Home.css';
 function Home(props) {
+
+const { t } = useTranslation();
+
 useEffect(() => {
 props.setProgress(50);
 setTimeout(() => {
@@ -32,7 +37,7 @@ return (
     </section>
 
     <section className="my-3" id="section3">
-    <h2 className="text-center" >Available for</h2>
+    <h2 className="text-center" >{t('homeAvailableFor')}</h2>
     <div className="my-3 text-center">
     <Swiper
         effect={'cube'}
@@ -72,14 +77,14 @@ return (
     </section>
 
     <section className="my-3" id="section4">
-    <h2 style={{color:"whitesmoke"}} className="text-center">About us</h2>
+    <h2 style={{color:"whitesmoke"}} className="text-center">{t('homeAboutUs')}</h2>
     <div className="my-3 container">
         <div>
-        <h3>Our Mission</h3>
-        <p>At codeVISTA, our mission is to create a dynamic online space where coders of all levels and backgrounds can come together to learn, create, and collaborate. We aim to provide a seamless and powerful code compilation experience that transcends barriers, making coding accessible to everyone. Through our vibrant community, we aspire to foster knowledge sharing, mentorship, and a sense of belonging among coders worldwide. Our commitment is to empower individuals to turn their code into impactful solutions, driving innovation and excellence in the ever-evolving world of technology.</p>
+        <h3>{t('homeOurMission')}</h3>
+        <p>{t('homeOurMissionText')}</p>
         </div>
         <div>
-        <h3>Our Vision</h3>
+        <h3>{t('homeOurVision')}</h3>
         <p>.......</p>
         </div>
     </div>
@@ -88,7 +93,7 @@ return (
     <section id="section5">
     <div>
         <div>
-        <h2 className="text-center">Our Team</h2>
+        <h2 className="text-center">{t('homeOurTeam')}</h2>
         </div>
         <div className="text-center">
         <img className="" style={{width:"auto",height:"25vh",}} src={GroupImage} alt="Image" />

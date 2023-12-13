@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "../components/Footer.css";
 import github from "../icons/github.svg";
 import githubColor from "../icons/githubColor.svg";
@@ -14,6 +15,7 @@ const [icon1, seticon1] = useState(insta);
 const [icon2, seticon2] = useState(github);
 const [icon3, seticon3] = useState(youtube);
 const [icon4, seticon4] = useState(linkedin);
+const { t } = useTranslation();
 
 const handleInstaIconEnter = () => {
 seticon1(instacolor);
@@ -50,15 +52,15 @@ return (
     }}
     >
         <div className="container">
-            <div className=" pt-3"><strong className="footer-text" style={{fontSize:"20px"}}>codeVISTA</strong><br />
-                <p className="footer-text text-muted my-0" style={{fontSize:"15px"}}>Decoding Complexity Crafting Simplicity</p>
+            <div className=" pt-3"><strong className="footer-text" style={{fontSize:"20px"}}>{t('brandName')}</strong><br />
+                <p className="footer-text text-muted my-0" style={{fontSize:"15px"}}>{t('footerBrandCaption')}</p>
             </div>
             <div className="pt-4 pb-4">
-                <p  className="footer-text ">Feedback : <a href="">link</a></p>
+                <p  className="footer-text ">{t('footerFeedback')} : <a href="">link</a></p>
             </div>
             <div  >
                 <p className="footer-text">
-                Contact Us :
+                {t('footerContactUs')} :
                     <a
                         target="blank"
                         href="#"
@@ -83,7 +85,7 @@ return (
             </div>
             <div >
                 <p className="footer-text">
-                    Follow us :
+                {t('footerFollowUs')} :
                     <a
                         target="blank"
                         href="https://github.com/iamabhishekagarwal/webDevProj-BIT.git"

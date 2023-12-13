@@ -57,9 +57,9 @@ return (
         <div className="title swiperSlide" data-swiper-parallax="-300">
         Slide 2
         </div>
-        <div className="subtitle" data-swiper-parallax="-200">
+        {/* <div className="subtitle" data-swiper-parallax="-200">
         Subtitle
-        </div>
+        </div> */}
         <div className="text" data-swiper-parallax="-100">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -76,9 +76,9 @@ return (
         <div className="title swiperSlide" data-swiper-parallax="-300">
         Slide 3
         </div>
-        <div className="subtitle" data-swiper-parallax="-200">
+        {/* <div className="subtitle" data-swiper-parallax="-200">
         Subtitle
-        </div>
+        </div> */}
         <div className="text" data-swiper-parallax="-100">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam

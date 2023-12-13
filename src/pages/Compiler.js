@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useTranslation } from 'react-i18next';
 import Cplusplus from "../icons/C++.svg";
 import C from "../icons/C.svg";
 import python from "../icons/Python.svg";
@@ -15,6 +16,7 @@ import "./Compiler.css";
 //logo credits to icons website
 
 function Compiler(props) {
+const { t } = useTranslation();
 const [text, setText] = useState("");
 const [variant,setVariant]=useState("light");
 
@@ -120,7 +122,7 @@ return (
         id="textfield"
         rows="20"
         autoFocus
-        placeholder="Enter your code here "
+        placeholder={t('compilerTextAreaPlaceholder1')}
         value={text}
         onChange={handleOnChange}
         style={{
@@ -138,7 +140,7 @@ return (
         style={{ backgroundColor: "#228B22", borderColor: "green",}}
         >
         <img  src={play} alt="play icon" />
-        Run
+        {t('compilerButton1')}
         </button>
 
         <button
@@ -154,7 +156,7 @@ return (
         onClick={handleToReset}
         >
         <img src={reset} alt="reset icon" />
-        Clear
+        {t('compilerButton2')}
         </button>
 
         <button
@@ -173,7 +175,7 @@ return (
             src={AI}
             alt="AI icon"
         />
-        Ask AI
+        {t('compilerButton3')}
         </button>
         </div>
     </div>
@@ -183,7 +185,7 @@ return (
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleDropdownMouseLeave}
         id="dropdown-item-button"
-        title="Select Language"
+        title={t('compilerLanguageDropDownMenu')}
         menuVariant="dark"
         style={{width:"180 px",}}
         >
@@ -243,7 +245,7 @@ return (
         name="Output"
         className="form-control output my-2 white-placeholder"
         id="textfield-output"
-        placeholder="Code-output"
+        placeholder={t('compilerTextAreaPlaceholder2')}
         rows="10"
         style={{
             background: "black",
@@ -257,7 +259,7 @@ return (
         rows="7"
         className="form-control output my-2 white-placeholder"
         id="textfield-output"
-        placeholder="AI-output"
+        placeholder={t('compilerTextAreaPlaceholder3')}
         style={{
             background: "black",
             color: "white",

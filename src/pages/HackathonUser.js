@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import Cards from "../components/Cards";
+
 function HackathonUser(props) {
-// document.body.style.background = "#242124";
+
+const { t } = useTranslation();
 
 useEffect(() => {
 props.setProgress(50);
@@ -12,7 +15,7 @@ setTimeout(() => {
 return (
 <>
     <h2 style={{ color: "white" }} className="text-center my-2">
-    Top-Hackathons
+    {t('hackathonTop')}
     </h2>
     <div className="my-3">
     <div className="row mx-3">

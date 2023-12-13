@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react'
-import Cards from '../components/Cards'
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import Cards from '../components/Cards';
+
 function TechNews(props) {
+    const { t } = useTranslation();
+
     useEffect(()=>{
         props.setProgress(50)
         setTimeout(()=>{
@@ -12,7 +16,7 @@ function TechNews(props) {
 return (
 <>
 <h2 style={{ color: "white" }} className="text-center my-2">
-    Top-TechNews
+    {t('technewsTop')}
     </h2>
     <div className="my-3">
     <div className="row mx-3">
