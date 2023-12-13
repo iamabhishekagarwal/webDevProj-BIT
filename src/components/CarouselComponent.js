@@ -34,8 +34,8 @@ return (
         }}
         data-swiper-parallax="-23%"
     ></div>
-    <SwiperSlide>
-        <div className="title swiperSlide" data-swiper-parallax="-300">
+    <SwiperSlide className=''>
+        <div className="title1  swiperSlide" data-swiper-parallax="-300">
         Welcome to codeVista
         </div>
         <div className="subtitle"  data-swiper-parallax="-200">
@@ -54,7 +54,7 @@ return (
         </div>
     </SwiperSlide>
     <SwiperSlide>
-        <div className="title swiperSlide" data-swiper-parallax="-300">
+        <div className="title2 swiperSlide" data-swiper-parallax="-300">
         Slide 2
         </div>
         {/* <div className="subtitle" data-swiper-parallax="-200">
@@ -73,7 +73,7 @@ return (
         </div>
     </SwiperSlide>
     <SwiperSlide>
-        <div className="title swiperSlide" data-swiper-parallax="-300">
+        <div className="title2 swiperSlide" data-swiper-parallax="-300">
         Slide 3
         </div>
         {/* <div className="subtitle" data-swiper-parallax="-200">

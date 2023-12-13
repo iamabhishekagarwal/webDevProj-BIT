@@ -94,7 +94,7 @@ kannada: {
     homeOurVision:"ನಮ್ಮ ದೃಷ್ಟಿಕೋನ",
     homeOurTeam:"ನಮ್ಮ ತಂಡ",
     compilerTextAreaPlaceholder1:"ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ",
-    compilerTextAreaPlaceholder2:"Code-output",
+    compilerTextAreaPlaceholder2:"ಕೋಡ್ ಔಟ್ಪುಟ್",
     compilerTextAreaPlaceholder3:"ಕೋಡ್-ಔಟ್ಪುಟ್",
     compilerLanguageDropDownMenu:"ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
     compilerButton1:"ಓಡು",

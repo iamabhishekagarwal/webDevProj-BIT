@@ -11,7 +11,6 @@ import logo from "../images/LOGO.jpeg";
 function NavigationBar() {
 
 const handleItemClick = (eventKey, event) => {
-    console.log(`Clicked item with eventKey: ${eventKey}`);
     if(eventKey==="item1"){
         changeLanguage('en')
     }

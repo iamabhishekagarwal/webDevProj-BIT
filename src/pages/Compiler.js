@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Cplusplus from "../icons/C++.svg";
 import C from "../icons/C.svg";
 import python from "../icons/Python.svg";
@@ -18,7 +18,7 @@ import "./Compiler.css";
 function Compiler(props) {
 const { t } = useTranslation();
 const [text, setText] = useState("");
-const [variant,setVariant]=useState("light");
+const [variant, setVariant] = useState("light");
 
 useEffect(() => {
 props.setProgress(50);
@@ -65,9 +65,13 @@ document.getElementById("button3").style.borderColor = "white";
 };
 
 const handleCopy = () => {
-let copyText = document.getElementById("textfield");
-copyText.select();
-navigator.clipboard.writeText(copyText.value);
+try {
+    let copyText = document.getElementById("textfield");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+} catch (error) {
+    alert("Select something to copy")
+}
 };
 
 const handleButtonCopyEnter = () => {
@@ -77,18 +81,20 @@ const handleButtonCopyLeave = () => {
 document.getElementById("CopyButton").style.backgroundColor = "grey";
 };
 
-const handleDropdownMouseEnter=()=>{
-    setVariant("info")
-}
-const handleDropdownMouseLeave=()=>{
-    setVariant("light")
-}
-
+const handleDropdownMouseEnter = () => {
+setVariant("info");
+};
+const handleDropdownMouseLeave = () => {
+setVariant("light");
+};
 
 return (
 <div className="container ">
     <div className="row mb-3 my-2">
-    <div className="col" style={{ position: "relative",paddingLeft:"0px" }}>
+    <div
+        className="col"
+        style={{ position: "relative", paddingLeft: "0px" }}
+    >
         <div
         style={{
             position: "absolute",
@@ -104,9 +110,9 @@ return (
             onMouseEnter={handleButtonCopyEnter}
             onMouseLeave={handleButtonCopyLeave}
             style={{
-            marginLeft:"2px",
-            padding:"0px 2px",
-            paddingBottom:"2px",
+            marginLeft: "2px",
+            padding: "0px 2px",
+            paddingBottom: "2px",
             backgroundColor: "grey",
             color: "black",
             borderColor: "black",
@@ -115,14 +121,14 @@ return (
             <img src={Copy} alt="Copy" />
         </button>
         </div>
-        
+
         <textarea
         name="code"
         className="form-control white-placeholder"
         id="textfield"
         rows="20"
         autoFocus
-        placeholder={t('compilerTextAreaPlaceholder1')}
+        placeholder={t("compilerTextAreaPlaceholder1")}
         value={text}
         onChange={handleOnChange}
         style={{
@@ -133,49 +139,49 @@ return (
 
         <div className="d-flex flex-row">
         <button
-        id="button1"
-        className="btn btn-primary  my-2 mx-2"
-        onMouseLeave={handleLeave1}
-        onMouseOver={handle1}
-        style={{ backgroundColor: "#228B22", borderColor: "green",}}
+            id="button1"
+            className="btn btn-primary  my-2 mx-2"
+            onMouseLeave={handleLeave1}
+            onMouseOver={handle1}
+            style={{ backgroundColor: "#228B22", borderColor: "green" }}
         >
-        <img  src={play} alt="play icon" />
-        {t('compilerButton1')}
+            <img src={play} alt="play icon" />
+            {t("compilerButton1")}
         </button>
 
         <button
-        id="button2"
-        className="btn btn-primary my-2 mx-2"
-        onMouseLeave={handleLeave2}
-        onMouseOver={handle2}
-        style={{
+            id="button2"
+            className="btn btn-primary my-2 mx-2"
+            onMouseLeave={handleLeave2}
+            onMouseOver={handle2}
+            style={{
             backgroundColor: "white",
             color: "black",
             borderColor: "white",
-        }}
-        onClick={handleToReset}
+            }}
+            onClick={handleToReset}
         >
-        <img src={reset} alt="reset icon" />
-        {t('compilerButton2')}
+            <img src={reset} alt="reset icon" />
+            {t("compilerButton2")}
         </button>
 
         <button
-        id="button3"
-        className="btn btn-primary my-2 mx-2"
-        style={{
+            id="button3"
+            className="btn btn-primary my-2 mx-2"
+            style={{
             backgroundColor: "white",
             color: "black",
             borderColor: "white",
-        }}
-        onMouseLeave={handleLeave3}
-        onMouseOver={handle3}
+            }}
+            onMouseLeave={handleLeave3}
+            onMouseOver={handle3}
         >
-        <img
+            <img
             // style={{ paddingRight: "2px", paddingBottom: "2px" }}
             src={AI}
             alt="AI icon"
-        />
-        {t('compilerButton3')}
+            />
+            {t("compilerButton3")}
         </button>
         </div>
     </div>
@@ -185,9 +191,9 @@ return (
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleDropdownMouseLeave}
         id="dropdown-item-button"
-        title={t('compilerLanguageDropDownMenu')}
+        title={t("compilerLanguageDropDownMenu")}
         menuVariant="dark"
-        style={{width:"180 px",}}
+        style={{ width: "180 px" }}
         >
         <Dropdown.Item as="button">
             C
@@ -245,7 +251,7 @@ return (
         name="Output"
         className="form-control output my-2 white-placeholder"
         id="textfield-output"
-        placeholder={t('compilerTextAreaPlaceholder2')}
+        placeholder={t("compilerTextAreaPlaceholder2")}
         rows="10"
         style={{
             background: "black",
@@ -259,13 +265,12 @@ return (
         rows="7"
         className="form-control output my-2 white-placeholder"
         id="textfield-output"
-        placeholder={t('compilerTextAreaPlaceholder3')}
+        placeholder={t("compilerTextAreaPlaceholder3")}
         style={{
             background: "black",
             color: "white",
         }}
         ></textarea>
-
     </div>
     </div>
 </div>
