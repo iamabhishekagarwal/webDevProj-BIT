@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from "react-bootstrap/Navbar";
 import { useTranslation } from 'react-i18next';
 import { LinkContainer } from "react-router-bootstrap";
-import logo from "../images/LOGO.jpeg";
+import logo from "../images/Cv.png";
 
 
 function NavigationBar() {

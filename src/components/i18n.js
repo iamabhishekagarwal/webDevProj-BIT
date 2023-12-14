@@ -34,6 +34,9 @@ en: {
     compilerButton3:"Ask AI",
     hackathonTop:"Top-hackathons",
     technewsTop:"Top-Tech News",
+    homeWelcomeMessage:"Welcome to codeVista",
+    homeWelcomeCaption:"Quill your code into quantum brilliance",
+
 
     },
 },
@@ -67,6 +70,8 @@ hindi: {
     compilerButton3:"एआई से पूछें",
     hackathonTop:"टॉप-हैकथॉन",
     technewsTop:"शीर्ष तकनीकी समाचार",
+    homeWelcomeMessage:"कोडविस्टा में आपका स्वागत है",
+    homeWelcomeCaption:"अपने कोड को क्वांटम प्रतिभा में बदलें",
 
 
 
@@ -102,7 +107,8 @@ kannada: {
     compilerButton3:"AI ಅನ್ನು ಕೇಳಿ",
     hackathonTop:"ಟಾಪ್-ಹ್ಯಾಕಥಾನ್‌ಗಳು",
     technewsTop:"ಶೀರ್ಷ ತಕನೀಕಿ ಸಮಾಚಾರ",
-
+    homeWelcomeMessage:"CodeVista ಗೆ ಸುಸ್ವಾಗತ",
+    homeWelcomeCaption:"ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಕ್ವಾಂಟಮ್ ಬ್ರಿಲಿಯನ್ಸ್ ಆಗಿ ಕ್ವಿಲ್ ಮಾಡಿ",
 
 
     },

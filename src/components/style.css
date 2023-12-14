@@ -28,7 +28,7 @@ body {
   background-position: center;
 }
 
- @media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .swiper-slide .title1 {
     margin-top: 30%;
     padding: auto auto;
@@ -121,6 +121,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .swiper-slide .title1 {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin-top: 13%;
     font-size: 70px;

@@ -47,7 +47,7 @@ return (
     style={{
         color: "whitesmoke",
         width: "100vw",
-        height: "40vh",
+        height: "auto",
         backgroundColor: "black",
     }}
     >

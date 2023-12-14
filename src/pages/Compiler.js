@@ -90,7 +90,7 @@ setVariant("light");
 
 return (
 <div className="container ">
-    <div className="row mb-3 my-2">
+    <div className="row  my-2">
     <div
         className="col"
         style={{ position: "relative", paddingLeft: "0px" }}

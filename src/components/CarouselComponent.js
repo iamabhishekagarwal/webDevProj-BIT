@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,6 +10,8 @@ import "./style.css";
 
 
 export default function CarouselComponent() {
+const { t } = useTranslation();
+
 return (
 <>
     <Swiper
@@ -36,10 +39,10 @@ return (
     ></div>
     <SwiperSlide className=''>
         <div className="title1  swiperSlide" data-swiper-parallax="-300">
-        Welcome to codeVista
+        {t('homeWelcomeMessage')}
         </div>
         <div className="subtitle"  data-swiper-parallax="-200">
-        Quill your code into Quantum brilliance
+        {t('homeWelcomeCaption')}
         </div>
         <div className="text" data-swiper-parallax="-100">
         {/* <p>

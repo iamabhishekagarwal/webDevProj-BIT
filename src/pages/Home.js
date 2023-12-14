@@ -37,8 +37,8 @@ return (
     </section>
 
     <section className="my-3" id="section3">
-    <h2 className="text-center" >{t('homeAvailableFor')}</h2>
-    <div className="my-3 text-center">
+    <h2 style={{marginBottom:"3%"}} className="text-center" >{t('homeAvailableFor')}</h2>
+    <div className=" text-center">
     <Swiper
         effect={'cube'}
         grabCursor={true}
@@ -76,9 +76,10 @@ return (
     </div>
     </section>
 
-    <section className="my-3" id="section4">
-    <h2 style={{color:"whitesmoke"}} className="text-center">{t('homeAboutUs')}</h2>
-    <div className="my-3 container">
+    <section  className="my-3" id="section4">
+    <div className="">
+    <h2 style={{marginTop:"6%"}} className="text-center">{t('homeAboutUs')}</h2>
+
         <div>
         <h3>{t('homeOurMission')}</h3>
         <p>{t('homeOurMissionText')}</p>
@@ -95,8 +96,8 @@ return (
         <div>
         <h2 className="text-center">{t('homeOurTeam')}</h2>
         </div>
-        <div className="text-center">
-        <img className="" style={{width:"auto",height:"25vh",}} src={GroupImage} alt="Image" />
+        <div className="my-4 text-center">
+        <img id="ourTeamImg" className="" src={GroupImage} alt="Image" />
         </div>
         <div className="row my-3 text-center" style={{color:"white"}}>
             <div className="col-6">
@@ -116,7 +117,7 @@ return (
     </div>
     </section>
 
-    <section id="section5">
+    <section id="section6">
     <Footer></Footer>
     </section>
 
