@@ -8,7 +8,7 @@ return (
         <div className="card-body">
             <h5 className="card-title">{props.title}</h5>
             <p className="card-text">{props.text}</p>
-            <a href="#" className="btn btn-primary">{props.buttonText}</a>
+            <a href={"https://"+props.RegistrationLink} className="btn btn-primary">{props.buttonText}</a>
         </div>
     </div>
 </>

@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Parallax } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import backgroundImage from "../images/mainImage.jpg"; // Replace with the actual path to your image
+import backgroundImage from "../images/mainImage.jpg";
 import "./style.css";
 
 

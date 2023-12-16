@@ -8,6 +8,5 @@
 }
 body{
     overflow-x: hidden;
-    background:linear-gradient(to right,#242124,black)
-    
+    background:linear-gradient(to left,black,#242124)   
 }

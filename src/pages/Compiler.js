@@ -19,6 +19,11 @@ function Compiler(props) {
 const { t } = useTranslation();
 const [text, setText] = useState("");
 const [variant, setVariant] = useState("light");
+const [program, setProgram] = useState("");
+const [output, setOutput] = useState("");
+const [outputAI, setOutputAI]= useState("");
+const [language,setLanguage]=useState(0);
+const [languagestr,setLanguagestr]=useState('python');
 
 useEffect(() => {
 props.setProgress(50);
@@ -193,7 +198,7 @@ return (
         id="dropdown-item-button"
         title={t("compilerLanguageDropDownMenu")}
         menuVariant="dark"
-        style={{ width: "180 px" }}
+        style={{width:"155px"}}
         >
         <Dropdown.Item as="button">
             C
